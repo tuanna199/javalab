@@ -5,7 +5,6 @@ public class DisplayDays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Array to store the number of days in each month
         int[] daysInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         while (true) {
@@ -14,7 +13,7 @@ public class DisplayDays {
 
             System.out.print("Enter the year: ");
             int year = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             // Check if the year is non-negative
             if (year < 0) {
