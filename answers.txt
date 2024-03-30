@@ -1,3 +1,15 @@
-What happens if users choose “Cancel”? -> You've chosen no
+#Lab01
+What happens if users choose “Cancel”? 
+-> You've chosen no
+
 How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do”
-and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help). -> Use showOptionDialog instead of showConfirmDialog and create a option array
+and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help). 
+-> Use showOptionDialog instead of showConfirmDialog and create a option array
+
+#Lab02
+If you create a constructor method to build a DVD by title then create a constructor method to
+build a DVD by category. Does JAVA allow you to do this?
+-> Yes, but the constructor will be duplicated.
+
+
+
