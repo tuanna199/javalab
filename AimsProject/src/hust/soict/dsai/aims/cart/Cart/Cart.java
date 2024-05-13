@@ -1,5 +1,5 @@
 package hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Cart {
     
@@ -51,5 +51,33 @@ public class Cart {
             totalCost += itemsOrdered[i].getCost();
         }
         return totalCost;
+    }
+    
+    public void printOrderedItems() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (int i = 0; i < qtyOrdered; i++) {
+            System.out.println((i + 1) + ". DVD - " + itemsOrdered[i].getTitle() + " - " +
+                               itemsOrdered[i].getCategory() + " - " + itemsOrdered[i].getDirector() +
+                               " - " + itemsOrdered[i].getLength() + " minutes: " + itemsOrdered[i].getCost() + "$");
+        }
+        System.out.println("Total cost: " + totalCost());
+        System.out.println("***************************************************");
+    }
+    
+    public void searchByTitle(String title) {
+        boolean found = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].isMatch(title)) {
+                if (!found) {
+                    System.out.println("Search results by Title:");
+                    found = true;
+                }
+                System.out.println(itemsOrdered[i]);
+            }
+        }
+        if (!found) {
+            System.out.println("No DVDs found with title: " + title);
+        }
     }
 }
